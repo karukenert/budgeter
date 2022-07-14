@@ -26,6 +26,7 @@ const handleSignOut = () => {
 </script>
 <template>
   <nav>
+    <div class="text-3xl font-bold underline px-1">Hello World!</div>
     <router-link to="/">Home</router-link>
     <router-link to="/feed">Feed</router-link>
     <router-link to="/register">Register</router-link>
