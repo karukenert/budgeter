@@ -1,8 +1,8 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
-
-// TODO: add eslint
+// TODO: maybe add formkit ?
+// import { plugin, defaultConfig } from '@formkit/vue'
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -23,4 +23,7 @@ const firebaseConfig = {
 
 initializeApp(firebaseConfig);
 
-createApp(App).use(router).mount("#app");
+createApp(App)
+	.use(router)
+	// .use(plugin, defaultConfig)
+	.mount("#app");
