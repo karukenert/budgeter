@@ -26,14 +26,32 @@ const handleSignOut = () => {
 </script>
 <template>
   <nav>
-    <div class="text-3xl font-bold underline px-1">Hello World!</div>
-    <router-link to="/">Home</router-link>
-    <router-link to="/feed">Feed</router-link>
-    <router-link to="/register">Register</router-link>
-    <router-link v-if="!isLoggedIn" to="/sign-in">Login</router-link>
-    <button v-if="isLoggedIn" @click="handleSignOut">Sign out</button>
+    <div class="text-3xl font-bold underline px-1">
+      Hello World!
+    </div>
+    <router-link to="/">
+      Home
+    </router-link>
+    <router-link to="/feed">
+      Feed
+    </router-link>
+    <router-link to="/register">
+      Register
+    </router-link>
+    <router-link
+      v-if="!isLoggedIn"
+      to="/sign-in"
+    >
+      Login
+    </router-link>
+    <button
+      v-if="isLoggedIn"
+      @click="handleSignOut"
+    >
+      Sign out
+    </button>
   </nav>
-  <router-view/>
+  <router-view />
 </template>
 
 <style>

@@ -20,10 +20,13 @@
       </div>
       <div class="rounded-md shadow-sm -space-y-px">
         <div>
-          <label for="email-address" class="sr-only">Email address</label>
+          <label
+            for="email-address"
+            class="sr-only"
+          >Email address</label>
           <input
-            v-model="email"
             id="email-address"
+            v-model="email"
             name="email"
             type="email"
             autocomplete="email"
@@ -46,13 +49,16 @@
               sm:text-sm
             "
             placeholder="Email address"
-          />
+          >
         </div>
         <div>
-          <label for="password" class="sr-only">Password</label>
+          <label
+            for="password"
+            class="sr-only"
+          >Password</label>
           <input
-            v-model="password"
             id="password"
+            v-model="password"
             name="password"
             type="password"
             autocomplete="current-password"
@@ -75,14 +81,18 @@
               sm:text-sm
             "
             placeholder="Password"
-          />
+          >
         </div>
       </div>
-      <p class="" v-if="errMsg">{{ errMsg }}</p>
+      <p
+        v-if="errMsg"
+        class=""
+      >
+        {{ errMsg }}
+      </p>
 
       <div>
         <button
-          @click="logIn"
           class="
             group
             relative
@@ -103,6 +113,7 @@
             focus:ring-offset-2
             focus:ring-indigo-500
           "
+          @click="logIn"
         >
           <span class="absolute left-0 inset-y-0 flex items-center pl-3">
             <LockClosedIcon
@@ -114,7 +125,7 @@
         </button>
 
         Or
-        <br />
+        <br>
         <span @click="singInWithGoogle">Sign in with Google!</span>
       </div>
     </div>
@@ -165,8 +176,7 @@ const logIn = async () => {
 
 const singInWithGoogle = () => {
   const provider = new GoogleAuthProvider();
-  signInWithPopup(getAuth(), provider)
-    .then((result) => {
+  signInWithPopup(getAuth(), provider).then((result) => {
       console.log(result.user);
       router.push("/feed");
     })
