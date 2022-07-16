@@ -38,22 +38,20 @@ const password = ref('')
 
 const register = async  () =>{
     const auth: Auth = getAuth()
-    try{
+    try {
      await createUserWithEmailAndPassword(auth, email.value, password.value)
         router.push('/feed')
         console.log(auth.currentUser)
-    }catch (error){
-          switch(error?.code){
-            case 'auth/email-already-in-use':
-            alert('Email already in use')
-            break;
-            default:
-            alert(error?.code)
-
-
-        }
+    } catch (error){
+        alert(error);
+        // switch (error?.code) {
+        //   case 'auth/email-already-in-use':
+        //     alert('Email already in use')
+        //     break;
+        //   default:
+        //     alert(error?.code)
+        // }
     }
-
 }
 
 const singInWithGoogle = ()=>{

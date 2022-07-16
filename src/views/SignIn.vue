@@ -139,6 +139,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   GoogleAuthProvider,
+    AuthError
 } from "firebase/auth";
 import { useRouter } from "vue-router";
 
@@ -154,23 +155,24 @@ const logIn = async () => {
     await signInWithEmailAndPassword(auth, email.value, password.value);
     router.push("/feed");
   } catch (error) {
-    switch (error?.code) {
-      case "auth/invalid-email":
-        errMsg.value = "Vigane email";
-        break;
-
-      case "auth/user-not-found":
-        errMsg.value = "Kasutajat ei leitud";
-        break;
-
-      case "auth/wrong-password":
-        errMsg.value = "Vale parool";
-        break;
-
-      default:
-        errMsg.value = "Vale email või parool";
-        break;
-    }
+      alert(error);
+    //   switch (error?.code) {
+    //   case "auth/invalid-email":
+    //     errMsg.value = "Vigane email";
+    //     break;
+    //
+    //   case "auth/user-not-found":
+    //     errMsg.value = "Kasutajat ei leitud";
+    //     break;
+    //
+    //   case "auth/wrong-password":
+    //     errMsg.value = "Vale parool";
+    //     break;
+    //
+    //   default:
+    //     errMsg.value = "Vale email või parool";
+    //     break;
+    // }
   }
 };
 
