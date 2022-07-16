@@ -2,10 +2,6 @@
   "name": "budgeter-vue-fe",
   "private": true,
   "version": "0.0.0",
-  "engines": {
-    "node": "16.16.0",
-    "npm": "8.x"
-  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
