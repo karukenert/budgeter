@@ -1,0 +1,15 @@
+{
+  "name": "budgeter-vue-fe",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "serve-static": "^1.15.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
