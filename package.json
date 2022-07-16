@@ -12,6 +12,8 @@
     "npm-install-server": "cd server && npm install",
     "postinstall": "npm run npm-install-client && npm run npm-install-server",
     "build": "cd client && npm run build",
-    "start": "cd server && node server.js"
+    "start": "cd server && node server.js",
+    "prebuild": "rm -rf client/dist",
+    "delete": "rm -rf client/node_modules && rm -rf server/node_modules && rm -rf client/dist"
   }
 }
