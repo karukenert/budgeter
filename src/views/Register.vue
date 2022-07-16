@@ -1,5 +1,5 @@
 <template>
-  <h1>Create an account</h1>  
+  <h1>Create an account</h1>
   <p>
     <input
       v-model="email"
@@ -43,14 +43,14 @@ const register = async  () =>{
         router.push('/feed')
         console.log(auth.currentUser)
     }catch (error){
-          switch(error.code){
+          switch(error?.code){
             case 'auth/email-already-in-use':
             alert('Email already in use')
             break;
             default:
-            alert(error.code)
-        
-            
+            alert(error?.code)
+
+
         }
     }
 

@@ -154,7 +154,7 @@ const logIn = async () => {
     await signInWithEmailAndPassword(auth, email.value, password.value);
     router.push("/feed");
   } catch (error) {
-    switch (error.code) {
+    switch (error?.code) {
       case "auth/invalid-email":
         errMsg.value = "Vigane email";
         break;
