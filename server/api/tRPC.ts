@@ -1,17 +1,17 @@
 import * as trpcExpress from '@trpc/server/adapters/express';
 import * as trpc from "@trpc/server";
-import {z} from "zod";
-import transactions from './routes/transactions'
+// import { z } from "zod";
+import transactions from './modules/transactions'
 
 // export function createRouter() {
 //     return trpc.router<Context>();
 // }
 
 const appRouter = trpc.router<Context>()
-    .query('test',{
-        input: z.string(),
-        resolve: (req) => req.input
-    })
+    // .query('test',{
+    //     input: z.string(),
+    //     resolve: (req) => req.input
+    // })
     .merge('transactions.',transactions);
     // .query('getUser', {
     //     input: z.string(),

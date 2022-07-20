@@ -17,6 +17,8 @@
     "serve-static": "^1.15.0",
     "vue": "^3.2.25",
     "vue-router": "^4.1.1",
+    "@trpc/client": "^9.26.2",
+    "@trpc/server": "^9.26.2",
 
     "vite": "^2.9.9",
     "vue-tsc": "^0.35",

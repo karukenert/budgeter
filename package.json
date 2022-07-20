@@ -13,8 +13,8 @@
     "npm-install-client": "cd client && npm install",
     "npm-install-server": "cd server && npm install",
     "build": "cd client && npm run build",
-    "start": "cd server && node server.js",
-    "delete": "rm -rf client/node_modules && rm -rf server/node_modules && rm -rf client/dist",
+    "start": "cd server && npm run start",
+    "delete": "rm -rf node_modules && rm -rf client/node_modules && rm -rf server/node_modules && rm -rf client/dist",
     "postinstall": "concurrently npm:npm-install-client npm:npm-install-server"
   },
   "dependencies": {

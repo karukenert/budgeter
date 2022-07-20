@@ -10,8 +10,9 @@ app.use('/trpc', trpcRouter);
 const distLocation = path.join(__dirname, '../client/dist');
 app.use(express.static(distLocation));
 // this * route is to serve project on different page api except root `/`
-app.get(/.*/, (req, res) => res.sendFile(`${distLocation}/index.html`));
+// @ts-ignore
+// app.get(/.*/, (req, res) => res.sendFile(`${distLocation}/index.html`));
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 app.listen(port,()=> console.log(`App is served at port ${port}`));
 

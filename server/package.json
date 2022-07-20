@@ -3,9 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "nodemon server.ts",
     "dev:server": "nodemon -e ts -w . -x ts-node ./server",
-    "start": "node server.ts"
+    "start": "ts-node server"
   },
   "dependencies": {
     "@trpc/client": "^9.26.2",
